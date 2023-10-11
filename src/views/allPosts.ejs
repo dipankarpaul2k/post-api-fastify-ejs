@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= locals.title %></title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        background-color: antiquewhite;
+      }
+      .postCon {
+        text-align: center;
+        background-color: bisque;
+        width: 300px;
+        margin: 10px auto;
+        padding: 1rem;
+      }
+      h3 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= locals.message %></h1>
+    <button><a href="/posts/new">Create new post</a></button>
+
+    <% Posts.forEach(elm => { %>
+    <div class="postCon">
+      <h3><%= elm.title %></h3>
+      <p><%= elm.body %></p>
+      <button><a href="/posts/<%= elm.id %>">See details</a></button>
+    </div>
+    <% }) %>
+  </body>
+</html>

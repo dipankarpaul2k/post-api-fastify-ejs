@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        background-color: antiquewhite;
+      }
+      a {
+        margin: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit Post</h1>
+    <h3>Post Id: <%= singlePost.id %></h3>
+    <form method="POST" action="/posts/<%= singlePost.id %>">
+      <input type="hidden" name="_method" value="PATCH" />
+      <label for="title"
+        >Title
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value="<%= singlePost.title
+        %>"
+      /></label>
+      <br /><br />
+      <label for="body"
+        >Body
+        <textarea name="body" id="body" cols="30" rows="10">
+<%= singlePost.body %></textarea
+        >
+      </label>
+      <br /><br />
+      <button>Confirm</button>
+    </form>
+  </body>
+</html>

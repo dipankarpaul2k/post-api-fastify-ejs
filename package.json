@@ -1,0 +1,26 @@
+{
+  "name": "post-api-fastify-ejs",
+  "version": "1.0.0",
+  "description": "A simple rest api built using fastify and ejs.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["node", "nodemon", "javascript", "npm", "ejs", "html", "fastify", "pino-pretty"],
+  "author": "Dipankar Paul",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/view": "^8.2.0",
+    "ejs": "^3.1.9",
+    "fastify": "^4.23.2",
+    "fastify-method-override": "^1.5.10",
+    "nanoid": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "pino-pretty": "^10.2.3"
+  }
+}

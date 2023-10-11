@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single post page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        background-color: antiquewhite;
+      }
+      button {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Post id: <%= singlePost.id %></h1>
+    <h3><%= singlePost.title %></h3>
+    <p><%= singlePost.body %></p>
+    <button><a href="/posts">Back</a></button>
+    <button><a href="/posts/<%= singlePost.id %>/edit">Edit</a></button>
+    <form method="POST" action="/posts/<%= singlePost.id %>">
+      <input type="hidden" name="_method" value="DELETE" />
+      <button>Delete Post</button>
+    </form>
+  </body>
+</html>
